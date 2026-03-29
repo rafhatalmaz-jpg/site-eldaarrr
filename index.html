@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ведущий Эльдар</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000000; /* 100% чёрный */
+      color: white;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* 🖼️ Фото и текст */
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .profile img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border: 5px solid gold;
+      border-radius: 15px;
+    }
+
+    .profile-text {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      max-width: 700px;
+      font-family: 'Georgia', serif;
+    }
+
+    /* 📝 Новый список мероприятий */
+    .services {
+      font-size: 1.5rem;
+      line-height: 2;
+      font-family: 'Palatino Linotype', serif;
+      text-align: left;
+      padding: 40px;
+      border: 3px solid #555;
+      border-radius: 15px;
+    }
+
+    .services ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .services li::before {
+      content: "✔️ ";
+    }
+
+    /* 🎨 Гарантия */
+    .guarantee {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      font-family: 'Times New Roman', serif;
+      text-align: center;
+      padding: 40px;
+      border: 3px solid #555;
+      border-radius: 15px;
+    }
+
+    /* 📸 Фотки мероприятий */
+    .event-photo {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border: 5px solid gold;
+      border-radius: 15px;
+    }
+
+    /* Новые позиции фоток */
+    .photo1 { top: 20px; left: 20px; z-index: 0; } /* верхний левый угол */
+    .photo2 { top: 50%; left: 45%; transform: translate(-50%, -50%); z-index: 0; } /* центр — слева */
+    .photo3 { top: 50%; left: 55%; transform: translate(-50%, -50%); z-index: 0; } /* центр — справа */
+
+    /* 📞 Кнопка связи */
+    .contact {
+      text-align: center;
+      margin-top: 50px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .contact button {
+      font-size: 1.5rem;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 10px;
+      background: gold;
+      color: #000000;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact button:hover {
+      background: #f2d600;
+    }
+
+    /* Подвал */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 1.2rem;
+      background: #050824;
+      z-index: 1;
+      position: relative;
+    }
+
+    @media(max-width: 768px) {
+      .profile {
+        flex-direction: column;
+      }
+      .profile img {
+        width: 80%;
+        height: auto;
+      }
+      .event-photo {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Фотки мероприятий -->
+  <img src="https://www.instagram.com/p/C9ett34tTqz/media/?size=l" alt="Фотка 1" class="event-photo photo1">
+  <img src="https://www.instagram.com/p/CyYinsutxEC/media/?size=l" alt="Фотка 2" class="event-photo photo2">
+  <img src="https://www.instagram.com/p/CxklJrKNGLe/media/?size=l" alt="Фотка 3" class="event-photo photo3">
+
+  <div class="container">
+
+    <!-- 1️⃣ Фото и текст -->
+    <div class="profile">
+      <img src="https://www.instagram.com/p/C29IElQtwhj/media/?size=l" alt="Эльдар">
+      <div class="profile-text">
+        Более 10 лет опыта работы с многими клиентами и более 20–30 мероприятий сделано за границей.
+        <br><br>
+        <strong>Ведущий Эльдар</strong>
+      </div>
+    </div><!-- 2️⃣ Новый список мероприятий -->
+    <div class="services">
+      Любые мероприятия на ваш усмотрение:
+      <ul>
+        <li>Свадьбы</li>
+        <li>Открытия</li>
+        <li>Дни рождения / юбилей</li>
+        <li>Презентации</li>
+        <li>Мероприятия по праздникам</li>
+        <li>В любой точке мира 🌍</li>
+        <li>Тимбилдинг</li>
+      </ul>
+    </div>
+
+    <!-- 3️⃣ Гарантия -->
+    <div class="guarantee">
+      Все ваши мероприятия пройдут 100% хорошо и весело!
+    </div>
+
+    <!-- 4️⃣ Кнопка связи -->
+    <div class="contact">
+      <button onclick="window.location.href='https://wa.me/77751316762'">
+        Связаться +7 775 131 6762
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Подвал -->
+  <footer>
+    +7 775 131 6762
+  </footer>
+
+</body>
+</html>
